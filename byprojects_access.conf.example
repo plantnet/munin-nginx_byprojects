@@ -1,0 +1,14 @@
+[byprojects_*]
+# generic config example for any symlink named byprojects_*
+group adm
+env.logtail_path /usr/sbin/logtail
+env.site.prod  [{"path":"/home/prod/log/access.log"}]
+env.site.dev   [{"path":"/var/log/httpd/ssl-dev-access.log"}, {"path":"/home/dev/log/access*.log"}]
+env.site.test  [{"path":"/var/log/access.log","regex":"\"[A-Z]+ /test/"}, {"path":"/home/test/log/access.log"}]
+
+[byprojects_prod]
+# specific config example for a symlink named byprojects_prod
+group adm
+env.logtail_path /usr/sbin/logtail
+env.site.api  [{"path":"/var/log/nginx/api_access.log"}]
+env.site.front  [{"path":"/var/log/nginx/front_access.log"}]
