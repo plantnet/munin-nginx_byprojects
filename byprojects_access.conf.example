@@ -9,6 +9,7 @@ env.site.test  [{"path":"/var/log/access.log","regex":"\"[A-Z]+ /test/"}, {"path
 [byprojects_prod]
 # specific config example for a symlink named byprojects_prod
 group adm
+env.graph_title PROD
 env.logtail_path /usr/sbin/logtail
 env.site.api  [{"path":"/var/log/nginx/api_access.log"}]
 env.site.front  [{"path":"/var/log/nginx/front_access.log"}]

@@ -47,6 +47,7 @@ edit `/etc/munin/plugin-conf.d/byprojects_access`:
  * add a `[byprojects_XXXX]` section for each graph 
  * add an `env.site.*` entry for each vHost and set the actual path(s) to the vHost log(s)
  * add a `group` directive with a group that has read access to nginx logs
+ * add a custom `graph_title` directive for each graph
 
 restart `munin-node`
 ```sh
